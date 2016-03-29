@@ -1,47 +1,57 @@
 $(document).ready(function() {
-  $("form#inputNum").submit(function(event) {
-    event.preventDefault();
+
+//     var sentence = "How ir?"
+//     var vowels = ["a","e","i","o","u"]
+//     var sentenceEdits = sentence.split("");
+//
+//     for (var i = 0; i < sentenceEdits.length; i++ ) {
+//       for (var x = 0; x < vowels.length; x++) {
+//         if (sentenceEdits[i] === vowels[x]) {
+//           sentenceEdits[i] = "-";
+//           //alert(sentenceEdits);
+//         }
+//       }
+//     }
+//     var str = sentenceEdits.join("");
+//     $("#stringEdit").text(str);
+//     $(".output").show();
+// });
+//
 
 
-    if (isNaN($("input#num1").val()) === true || isNaN($("input#num2").val()) === true){
-      alert("Enter something, preferably a number, ok?");
-    } else {
-
-      var countTo = parseInt($("input#num1").val());
-      var countBy = parseInt($("input#num2").val());
 
 
-       if (countTo < 0) {
-          alert("Enter a positive number?");
+    var sent = "What's up?";
+    var sentSplit = sent.split("");
+    //var result = sentSplit.replace("-");
 
-      } else if (countBy > countTo) {
-        alert("Please enter a large number first and a smaller number second.")
-      } else {
-        for (var index = countBy; index <= countTo; index += countBy)
-        $("#totals").append(index + "  ");
-        $(".output").show();
+    for (var i = 0; i < sentSplit.length; i++) {
+      if (sentSplit[i] = ('a') || sentSplit[i] = ('e') || sentSplit[i] = ('i') || sentSplit[i] = ('o') || sentSplit[i] = ('u')) {
+        sentSplit[i] = "-";
       }
-  }
-  });
-});
+      }
 
-
-// } else if (countTo.length === 0 || countBy.length === 0) {
-//     alert("Enter something, preferably a number, ok?");
-// } else if (countTo === NaN || countBy === NaN) {
-//   alert("Enter something, preferably a number, ok?");
+      var stringBack = sentSplit.join("");
+          $("#stringEdit").text(stringBack);
+          $(".output").show();
+      });
+//       $("#stringEdit").text(result);
+//       $(".output").show();
+//
+//   });
+//
+//
+//    $(".string").val();
+//
+//     $(".string").submit(function(event) {
+//       event.preventDefault();
+//
+// });
+//
+// console.log("cool");
 
 //
-//     } else if (!countTo < 0 || !countBy < 0) {
-
-
-//    	Math.abs(countTo, countBy); {
-//
-// if (countTo.length === 0 || countBy.length === 0) {
-//   alert("Enter something, preferably a number, ok?");
-// } else if (typeof countTo === 'string' || typeof countBy === 'string') {
-//   alert("Enter something, preferably a number, ok?");
-//
-// if (countBy > countTo) {
-//   alert("Enter a larger number 1st and a smaller number 2nd");
-// } else {
+// var newSentence = sentenceEdits.map(function(sentenceEdit) {
+//   sentenceEdits.replace(vowels,'-');
+//   alert(newSentence);
+//   return newSentence;
